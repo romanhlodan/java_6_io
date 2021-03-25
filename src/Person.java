@@ -3,15 +3,17 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
+import java.io.Serializable;
+
 @ToString
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-public class Person {
+public class Person implements Serializable {
     private int id;
     private String name;
     private int age;
-    private String e_mail;
+    private transient String e_mail;
     private Education education;
 
 
